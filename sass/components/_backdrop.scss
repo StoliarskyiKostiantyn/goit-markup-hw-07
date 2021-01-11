@@ -19,7 +19,6 @@
 }
 .close-btn {
   display: flex;
-  /*align-items: center;*/
   justify-content: center;
   position: absolute;
   padding: 6px;
@@ -32,10 +31,11 @@
   border-radius: 50%;
   cursor: pointer;
   fill: #000;
+  &:hover {
+    fill: var(--accent-color);
+  }
 }
-.close-btn:hover {
-  fill: var(--accent-color);
-}
+
 .is-hidden {
   opacity: 0;
   visibility: hidden;
@@ -65,9 +65,9 @@
   line-height: 1.166;
   letter-spacing: 0.01em;
   color: #757575;
-}
-.modal-form-field:last-child {
-  margin-bottom: 0px;
+  &:last-child {
+    margin-bottom: 0px;
+  }
 }
 
 .modal-form-input {
@@ -78,10 +78,10 @@
   padding-left: 42px;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
-}
-.modal-form-input:focus {
-  outline: none;
-  border-color: var(--accent-color);
+  &:focus {
+    outline: none;
+    border-color: var(--accent-color);
+  }
 }
 .modal-form-input-wrapper {
   position: relative;
@@ -95,9 +95,9 @@
   top: 50%;
   transform: translateY(-50%);
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.modal-form-input:focus + .modal-input-icon {
-  fill: var(--accent-color);
+  .modal-form-input:focus + & {
+    fill: var(--accent-color);
+  }
 }
 .modal-form-message {
   width: 100%;
@@ -113,26 +113,13 @@
   resize: none;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
+  &:focus {
+    outline-offset: 0px;
+    outline: none;
+    border-color: var(--accent-color);
+  }
 }
-.modal-form-message:focus {
-  outline-offset: 0px;
-  outline: none;
-  border-color: var(--accent-color);
-}
-.modal-form-policy:checked + .modal-form-policy-text::before {
-  background-image: url("../images/icon-check.svg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  border: none;
-}
-.modal-form-policy-text::before {
-  content: "";
-  display: inline-block;
-  width: 16px;
-  height: 15px;
-  border: 1px solid #000;
-  margin-right: 7px;
-}
+
 .modal-form-policy-text {
   display: flex;
   align-items: center;
@@ -144,6 +131,20 @@
   line-height: 1.714;
   letter-spacing: 0.03em;
   color: #757575;
+  &:before {
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 15px;
+    border: 1px solid #000;
+    margin-right: 7px;
+    .modal-form-policy:checked + & {
+      background-image: url("../images/icon-check.svg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      border: none;
+    }
+  }
 }
 .policy-link {
   text-decoration-line: underline;

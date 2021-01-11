@@ -2,21 +2,29 @@
   background-color: #2f303a;
   padding-top: 60px;
   padding-bottom: 60px;
-}
-.footer .container {
-  display: flex;
-  max-height: 252px;
-}
-.footer .contacts-list {
-  margin-top: 20px;
+  .container {
+    display: flex;
+    max-height: 252px;
+  }
+  .contacts-list {
+    margin-top: 20px;
+  }
+  .social-link {
+    background-color: rgba(255, 255, 255, 0.1);
+    &:hover,
+    &:focus {
+      background-color: var(--accent-color);
+    }
+  }
 }
 .footer-adress {
   width: max-content;
   height: max-content;
 }
-
-.contacts-list-item:not(:last-child) {
-  margin-bottom: 9px;
+.contacts-list-item {
+  &:not(:last-child) {
+    margin-bottom: 9px;
+  }
 }
 
 .text-dark-theme {
@@ -67,14 +75,7 @@
   margin-top: 12px;
   margin-left: 70px;
 }
-.footer .social-link {
-  background-color: rgba(255, 255, 255, 0.1);
-}
 
-.footer .social-link:hover,
-.footer .social-link:focus {
-  background-color: var(--accent-color);
-}
 .sub-form {
   margin-top: 12px;
   margin-left: 93px;
@@ -98,9 +99,9 @@
   background-color: #2f303a;
   margin-right: 12px;
   color: rgba(255, 255, 255, 0.3);
-}
-.sub-form-mail-input:focus {
-  outline: none;
+  &:focus {
+    outline: none;
+  }
 }
 .sub-form-wrapper {
   display: flex;

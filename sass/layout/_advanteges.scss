@@ -14,9 +14,12 @@
   margin-bottom: 30px;
   border-radius: 4px;
 }
-.advanteges-list-item:not(:last-child) {
-  margin-right: 30px;
+.advanteges-list-item {
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
 }
+
 .advanteges-title {
   font-family: Roboto;
   font-weight: bold;

@@ -19,10 +19,11 @@
 }
 .whatwedo-list-item {
   position: relative;
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
 }
-.whatwedo-list-item:not(:last-child) {
-  margin-right: 30px;
-}
+
 .whatwedo-item-text-wraper {
   display: block;
   position: absolute;

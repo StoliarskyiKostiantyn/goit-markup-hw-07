@@ -78,6 +78,13 @@ img {
   margin-right: 50px;
 }
 
+.nav-list-item .nav-tel {
+  display: flex;
+  width: max-content;
+  height: max-content;
+  align-items: center;
+}
+
 .header-section {
   border-bottom: 2px solid #ececec;
 }
@@ -92,13 +99,6 @@ img {
   margin-left: auto;
 }
 
-.nav-list-item .nav-tel {
-  display: flex;
-  width: max-content;
-  height: max-content;
-  align-items: center;
-}
-
 .current,
 .logo-text,
 .nav-link:focus,
@@ -110,6 +110,13 @@ img {
 
 .nav-link {
   display: block;
+  font-family: Roboto;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.143;
+  letter-spacing: 0.02em;
+  color: #212121;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav-link .current::after {
@@ -133,16 +140,6 @@ img {
 .nav-tel:focus .nav-list-icon,
 .nav-tel:hover .nav-list-icon {
   fill: var(--accent-color);
-}
-
-.nav-link {
-  font-family: Roboto;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.143;
-  letter-spacing: 0.02em;
-  color: #212121;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav-tel {
@@ -362,6 +359,10 @@ img {
   height: max-content;
 }
 
+.social-list-item:not(:last-child) {
+  margin-right: 10px;
+}
+
 .social-link {
   display: flex;
   justify-content: center;
@@ -373,28 +374,20 @@ img {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.social-link-icon {
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+.social-link:hover, .social-link:focus {
+  background-color: var(--accent-color);
 }
 
-.social-link:hover,
-.social-link:focus {
-  background-color: var(--accent-color);
+.social-link-icon {
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  width: 20px;
+  height: 20px;
+  fill: #afb1b8;
 }
 
 .social-link:hover .social-link-icon,
 .social-link:focus .social-link-icon {
   fill: #ffffff;
-}
-
-.social-list-item:not(:last-child) {
-  margin-right: 10px;
-}
-
-.social-link-icon {
-  width: 20px;
-  height: 20px;
-  fill: #afb1b8;
 }
 
 .partners {
@@ -418,14 +411,8 @@ img {
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.partners-box:hover,
-.partners-box:focus {
+.partners-box:hover, .partners-box:focus {
   border: 1px solid #2196f3;
-}
-
-.partners-box:hover .partners-logo,
-.partners-box:focus .partners-logo {
-  fill: #2196f3;
 }
 
 .partners-list-item:not(:last-child) {
@@ -435,6 +422,11 @@ img {
 .partners-logo {
   fill: #afb1b8;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.partners-box:hover .partners-logo,
+.partners-box:focus .partners-logo {
+  fill: #2196f3;
 }
 
 .footer {
@@ -450,6 +442,14 @@ img {
 
 .footer .contacts-list {
   margin-top: 20px;
+}
+
+.footer .social-link {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.footer .social-link:hover, .footer .social-link:focus {
+  background-color: var(--accent-color);
 }
 
 .footer-adress {
@@ -510,15 +510,6 @@ img {
 .join-block {
   margin-top: 12px;
   margin-left: 70px;
-}
-
-.footer .social-link {
-  background-color: rgba(255, 255, 255, 0.1);
-}
-
-.footer .social-link:hover,
-.footer .social-link:focus {
-  background-color: var(--accent-color);
 }
 
 .sub-form {
@@ -601,7 +592,6 @@ img {
 
 .close-btn {
   display: flex;
-  /*align-items: center;*/
   justify-content: center;
   position: absolute;
   padding: 6px;
@@ -713,22 +703,6 @@ img {
   border-color: var(--accent-color);
 }
 
-.modal-form-policy:checked + .modal-form-policy-text::before {
-  background-image: url("../images/icon-check.svg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  border: none;
-}
-
-.modal-form-policy-text::before {
-  content: "";
-  display: inline-block;
-  width: 16px;
-  height: 15px;
-  border: 1px solid #000;
-  margin-right: 7px;
-}
-
 .modal-form-policy-text {
   display: flex;
   align-items: center;
@@ -740,6 +714,22 @@ img {
   line-height: 1.714;
   letter-spacing: 0.03em;
   color: #757575;
+}
+
+.modal-form-policy-text:before {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  border: 1px solid #000;
+  margin-right: 7px;
+}
+
+.modal-form-policy:checked + .modal-form-policy-text:before {
+  background-image: url("../images/icon-check.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: none;
 }
 
 .policy-link {
@@ -871,8 +861,7 @@ img {
   transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.list-button:hover,
-.list-button:focus {
+.list-button:hover, .list-button:focus {
   background: var(--accent-color);
   color: white;
   cursor: pointer;
