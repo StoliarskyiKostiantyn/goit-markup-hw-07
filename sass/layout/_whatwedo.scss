@@ -1,0 +1,47 @@
+.whatwedo.container {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+.section-title {
+  font-family: Roboto;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 1.667;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: #212121;
+  margin-bottom: 50px;
+}
+.whatwedo-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.whatwedo-list-item {
+  position: relative;
+}
+.whatwedo-list-item:not(:last-child) {
+  margin-right: 30px;
+}
+.whatwedo-item-text-wraper {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 70px;
+  transform: translateY(-100%);
+  background-color: rgba(47, 48, 58, 0.8);
+  padding-top: 27px;
+  padding-bottom: 27px;
+}
+
+.whatwedo-item-text {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.14;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #ffffff;
+}
