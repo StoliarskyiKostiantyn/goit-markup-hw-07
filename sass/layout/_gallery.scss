@@ -64,24 +64,24 @@
   }
 }
 .overlay-text {
-  font-family: Roboto;
+  font-family: var(--font-family-1);
   font-style: normal;
-  font-weight: normal;
-  font-size: 18px;
+  font-weight: var(--font-normal);
+  font-size: var(--font-accent-text);
   line-height: 1.555;
   letter-spacing: 0.03em;
-  color: #ffffff;
+  color: var(--p-dark-t-color);
 }
 .list-button {
-  background: #f5f4fa;
-  font-family: Roboto;
+  background: var(--pic-color);
+  font-family: var(--font-family-1);
   font-style: normal;
   font-weight: 500;
-  font-size: 16px;
+  font-size: var(--font-btn);
   line-height: 1.625;
   text-align: center;
   letter-spacing: 0.03em;
-  color: #212121;
+  color: var(--h-text-color);
   border: none;
   padding-left: 22px;
   padding-right: 22px;
@@ -92,28 +92,28 @@
   &:hover,
   &:focus {
     background: var(--accent-color);
-    color: white;
+    color: var(--p-dark-t-color);
     cursor: pointer;
     box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12),
       0px 1px 2px 0px rgba(0, 0, 0, 0.08), 0px 3px 1px 0px rgba(0, 0, 0, 0.1);
   }
 }
 .portfolio-card-title {
-  font-family: Roboto;
+  font-family: var(--font-family-1);
   font-style: normal;
-  font-weight: bold;
-  font-size: 18px;
+  font-weight: var(--font-bold);
+  font-size: var(--font-accent-text);
   line-height: 2;
   letter-spacing: 0.06em;
-  color: #212121;
+  color: var(--h-text-color);
   margin-bottom: 4px;
 }
 .portfolio-card-category {
-  font-family: Roboto;
+  font-family: var(--font-family-1);
   font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
+  font-weight: var(--font-normal);
+  font-size: var(--font-btn);
   line-height: 1.875;
   letter-spacing: 0.03em;
-  color: #757575;
+  color: var(--p-text-color);
 }

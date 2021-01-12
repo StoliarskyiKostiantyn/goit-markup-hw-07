@@ -3,13 +3,13 @@
   padding-bottom: 94px;
 }
 .section-title {
-  font-family: Roboto;
-  font-weight: bold;
+  font-family: var(--font-family-1);
+  font-weight: var(--font-bold);
   font-size: 36px;
   line-height: 1.667;
   text-align: center;
   letter-spacing: 0.03em;
-  color: #212121;
+  color: var(--h-text-color);
   margin-bottom: 50px;
 }
 .whatwedo-list {
@@ -36,13 +36,13 @@
 }
 
 .whatwedo-item-text {
-  font-family: Roboto;
+  font-family: var(--font-family-1);
   font-style: normal;
-  font-weight: bold;
-  font-size: 14px;
+  font-weight: var(--font-bold);
+  font-size: var(--font-size-main);
   line-height: 1.14;
   text-align: center;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  color: #ffffff;
+  color: var(--p-dark-t-color);
 }

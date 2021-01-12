@@ -1,7 +1,7 @@
 .logo-link {
-  font-family: Raleway;
-  font-weight: bold;
-  font-size: 26px;
+  font-family: var(--font-family-2);
+  font-weight: var(--font-bold);
+  font-size: var(--font-logo);
   line-height: 1.192;
   letter-spacing: 0.03em;
   margin-right: 95px;
@@ -46,12 +46,12 @@
 }
 .nav-link {
   display: block;
-  font-family: Roboto;
+  font-family: var(--font-family-1);
   font-weight: 500;
-  font-size: 14px;
+  font-size: var(--font-size-main);
   line-height: 1.143;
   letter-spacing: 0.02em;
-  color: #212121;
+  color: var(--h-text-color);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   .current::after {
     position: absolute;
@@ -66,7 +66,7 @@
   }
 }
 .nav-list-icon {
-  fill: #757575;
+  fill: var(--p-text-color);
   margin-right: 10px;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   .nav-tel:focus &,
@@ -75,11 +75,11 @@
   }
 }
 .nav-tel {
-  font-family: Roboto;
+  font-family: var(--font-family-1);
   font-weight: 500;
-  font-size: 14px;
+  font-size: var(--font-size-main);
   line-height: 1.143x;
   letter-spacing: 0.02em;
-  color: #757575;
+  color: var(--p-text-color);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
